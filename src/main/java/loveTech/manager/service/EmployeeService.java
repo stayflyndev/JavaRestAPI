@@ -25,7 +25,7 @@ public class EmployeeService {
     public List<Employee> findAllEmployees() {
         return employeeRepo.findAll();
     }
-    public Employee udpateEmployee(Employee employee){
+    public Employee updateEmployee(Employee employee){
         return employeeRepo.save(employee);
     }
 
@@ -35,4 +35,5 @@ public class EmployeeService {
     public void deleteEmployee(Long id) {
         employeeRepo.deleteEmployeeById(id);
     }
+
 }
