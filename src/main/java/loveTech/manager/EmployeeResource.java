@@ -19,14 +19,14 @@ public class EmployeeResource {
 
     //method return employees
     @GetMapping("/all")
-    public ResponseEntity<List<Employee>> getAllEmployee () {
+    public ResponseEntity<List<Employee>> getAllEmployees () {
         List<Employee> employees = employeeService.findAllEmployees();
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
 
     //method return single employee
     @GetMapping("/find/{id}")
-    public ResponseEntity<Employee> getEmployeeById (@PathVariable("id") Long id) {
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") Long id) {
         Employee employees = employeeService.findEmployeeById(id);
         return new ResponseEntity<>(employees, HttpStatus.OK);
     }
